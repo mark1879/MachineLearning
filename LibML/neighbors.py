@@ -5,6 +5,7 @@ import numpy as np
 from math import sqrt
 from collections import Counter
 
+
 class KNeighborsClassifier:
 
     def __init__(self, k):
@@ -38,7 +39,7 @@ class KNeighborsClassifier:
             "the feature's number of x_predict must be equal to x_train"
 
         dist = [sqrt(np.sum((x_predict - x) ** 2))
-                     for x in self.x_train]
+                for x in self.x_train]
 
         nearest = np.argsort(dist)
 
